@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th {
+      background-color: #f2f2f2;
+      text-align:center;
+      padding: 10px;
+      font-size: 1.1em;
+    }
+    td {
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+    input, select, textarea {
+    padding: 6px;
+    box-sizing: border-box;
+    }
+    .width{
+        width: 95%;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+    .buttons {
+      text-align: center;
+    }
+
+
+    </style>
+</head>
+<body><center><h1 style="size: 100px;">Registration Form</h1></center>
+    <form action="#" method="post" style="width: 50%;
+    margin: 0 auto;">
+    <fieldset>
+      <legend>Personal Details:</legend>
+    <table>
+        <tr><th colspan="2">Personal Details:</th></tr>
+        <tr>
+          <td>First Name:</td>
+          <td><input class="width"  type="text" name="firstName" required></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td><input class="width" type="text" name="lastName" required></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input class="width" type="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td>Phone Number:</td>
+          <td><input class="width" type="tel" name="phone" pattern="\d{10}" title="Enter a 10-digit phone number"></td>
+        </tr>  
+        </table>
+        </fieldset>
+        <fieldset>
+            <legend>Account Details:</legend>
+          <table>
+        <tr><th colspan="2">Account Details: </th>  </tr>  
+        <tr>
+            <td>Username:</td>
+            <td><input class="width" type="text" required pattern="[A-Za-z0-9]{5-15}" title="5-15 alpha numerical characters"></td>
+        </tr>
+         <tr>   <td>Password:</td>
+            <td><input class="width" type="password"  name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" title="Minimum 8 characters, including uppercase, lowercase, number, and special character" > </td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td>
+                <input class="width" type="password" name="confirmpassword"  required>
+            </td>
+        </tr> </table>
+             </fieldset>
+             <fieldset>
+                <legend>Address:</legend>
+              <table>
+        <tr><th colspan="2">Address:</th></tr>
+        <tr>
+            <td>Address Line 1:</td>
+            <td><input class="width"  type="text" name="address1" required ></td>
+        </tr>
+        <tr>
+            <td>Address Line 2:</td>
+            <td><input class="width" type="text" name="address2"  ></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><input class="width" type="text" name="city" required ></td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td><select class="width" name="State" required>
+                <option value="">Select state</option>
+                <option value="TG">Telangana</option>
+                <option value="AP">Andhra Pradhesh</option>
+                <option value="KA">Karnataka</option>
+                <option value="TN">Tamil Nadu</option>
+                <option value="MH">Maharashtra</option>
+
+            </select></td>
+        </tr>
+        <tr>
+            <td>ZIP Code:</td>
+            <td><input class="width" type="text" required  pattern="\d{5}" title="Enter a 5-digit ZIP code"></td>
+        </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+    <legend>Preferences:</legend>
+  <table>
+        <tr><th colspan="2">Preferences </th></tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" name="Gender" value="Male">Male
+                <input type="radio" name="Gender" value="Female">Female
+                <input type="radio" name="Gender" value="Other">Other          
+            </td>
+        </tr>
+        <tr>
+            <td>Subscribe to Newsletter:</td>
+            <td><input type="checkbox" name="newsletter"></td>
+        </tr>
+        <tr>
+            <td>Short Bio:</td>
+            <td><textarea class="width" name="bio" maxlength="200" rows="4" placeholder="Max 200 characters"></textarea></td>
+        </tr>
+    </table>
+</fieldset>
+
+    <fieldset>
+        <legend>Terms and Conditions</legend>
+        <table>
+          <tr><th colspan="2">Agreement</th></tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" name="agree" required> I agree to the terms and conditions
+            </td>
+          </tr>
+        </table>
+        <iframe srcdoc="
+          <h2>Terms and Conditions</h2>
+          <p>By using this form, you agree to provide accurate information and abide by our policies. Your data will be handled securely and not shared without consent.</p>
+          <p>Please read all terms carefully before submitting.</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quo ea et asperiores soluta dicta quisquam porro saepe fugiat accusantium illum, autem in aliquam magni reiciendis ut minus facere rem!</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quo ea et asperiores soluta dicta quisquam porro saepe fugiat accusantium illum, autem in aliquam magni reiciendis ut minus facere rem!</p>  "></iframe>
+      </fieldset>
+      <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+    
+    </body>
+    </html>
+ 
